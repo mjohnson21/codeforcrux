@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Code for CrUX</h1>
+				</section>
+				<section>
+					<h1>Getting Started</h1>
+				</section> <!-- END TYPOGRAPHY ======================== -->
+
+
+
+				<section>
+					<section>
+						<h1>Typography</h1>
+					</section>
+					<section>
+						<h2>Headings</h2>
+						<p>A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically.</p>
+						<pre><code>
+<h1>Heading</h1>
+<h2>Heading</h2>
+<h3>Heading</h3>
+<h4>Heading</h4>
+<h5>Heading</h5>
+<h6>Heading</h6>
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Paragraph, Strong and Em (emphasis)</h2>
+						<pre><code>
+<p>This is a <strong>paragraph</strong>. It <em>usually</em> has some text in it.</p>
+						</code></pre>
+						<p>This is a <strong>paragraph</strong>. It <em>usually</em> has some text in it.</p>
+						<p>Paragraphs are block elements, while <strong>strong</strong> and <em>em</em> are inline.</p>
+					</section>
+
+
+					<section>
+						<h2>Lists</h2>
+						<p>Two types, ordered and unordered. The only thing that can be the child of a list is a list item.</p>
+						<pre><code>
+<ul>
+  <li>Item One</li>
+  <li>Item Two</li>
+</ul>
+						</code></pre>
+						<ul>
+							<li>Item One</li>
+							<li>Item Two</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Ordered List</h2>
+						<p>Both Ordered and Unorderd lists are block by default, as are list items.</p>
+						<pre><code>
+<ol>
+  <li>Item One</li>
+  <li>Item Two</li>
+</ol>
+						</code></pre>
+						<ol>
+						  <li>Item One</li>
+						  <li>Item Two</li>
+						</ol>
+					</section>
+
+					<section>
+						<h2>Combining Elements</h2>
+						<pre><code>
+  <ul>
+    <li>
+      <h3>Item Name</h3>
+      <p>The description of this particular item.</p>
+    </li>
+  </ul>
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Inline Semantic Elements</h2>
+						<p>Use the HTML inline text semantic to define the meaning, structure, or style of a word, line, or any arbitrary piece of text.</p>
+						<pre><code>
+  <br>Line break, often <br />
+  <u>Underline</u>
+  <strong>Strong, often bold.</strong>
+  <em>Emphasis, usualy italicized</em>
+  <span>Generic containr for content. No semantics.</span>
+  <small>Makes the text smaller</small>
+  <sub>Smaller and lower on the baseline</sub>
+  <sup>Smaller and higher on the baseline</sup>
+  <cite>A citation, reference to creative work.</cite>
+  <code>A snippet of code.</code>
+  <s>strikethrough</s>
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Anchor Tags</h2>
+						<p>Defines a <a href="http://google.com" target="_blank">Hyperlink</a> to a location on the same page or any other page on the Web.</p>
+						<pre><code>
+<a href="http://google.com" target="_blank">Google</a>
+						</code></pre>
+					</section>
+
+				</section> <!-- END TYPOGRAPHY ======================== -->
+
+
+				<section>
+					<section>
+						<h1>Styling Typography</h1>
+					</section>
+
+          <section>
+            <h2>What is CSS?</h2>
+            <p>CSS is an acronym for Cascading Style Sheets.</p>
+            <p>It is governed by special rules such as specicifity and cascade.</p>
+          </section>
+
+					<section>
+						<h2>Attaching CSS</h2>
+						<p>CSS is the language used to describe HTML. There are several ways to attach styles to HTML. Best practice is as an external file.</p>
+						<pre><code>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  a { color: red; }
+</style>
+
+<a href="#" style="color: blue;">Link</a>
+						</code></pre>
+					</section>
+
+
+
+					<section data-background="#fff">
+						<h2 data-color="#333">Anatomy of a Rule</h2>
+						<img src="img/css-syntax.gif" alt="">
+					</section>
+
+          <section>
+            <h2>font-size</h2>
+            <pre><code>
+body {
+  font-size: 15px;
+}
+p {
+  font-size: 16px;
+  font-size: 1em;
+  font-size: 1rem;
+  font-size: 50%;
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>PX, EM and REM</h2>
+            <p><strong>PX</strong> (pixel) renders the letters at exactly the number of pixels in height that you specified. Mostly.</p>
+            <p><strong>EM</strong> is a ratio of the parent's font-size.</p>
+            <p><strong>REM</strong> is the ratio of the body's font-size.</p>
+          </section>
+
+					<section data-background="#fff">
+						<img src="img/font-size-line-height.png" alt="">
+					</section>
+
+          <section>
+            <ul>
+              <li>line-height ~ leading</li>
+              <li>letter-spacing = tracking (not kerning)</li>
+            </ul>
+            <pre><code>
+p {
+  letter-spacing: 5px;
+}
+            </code></pre>
+            <p style="letter-spacing: 5px;">Paragraph with 5px letter spacing.</p>
+            <p>Letter spacing with no paragraphing.</p>
+          </section>
+
+          <section>
+            <h2>Font-family</h2>
+            <p>The font-family CSS property lets you specify a prioritized list of font family names and/or generic family names for the selected element. </p>
+            <p>Values are separated by a comma to indicate that they are alternatives. The browser will select the first font on the list that is installed on the computer or that can be downloaded using a @font-face at-rule.</p>
+          </section>
+
+          <section>
+            <h2>Font-Family: Generics</h2>
+            <pre><code>
+  p {
+    font-family: serif;
+    font-family: sans-serif;
+    font-family: monospace;
+    font-family: cursive;
+    font-family: fantasy;
+  }
+            </code></pre>
+            <p style="font-family: serif;">Serif.</p>
+            <p style="font-family: sans-serif;">Sans-Serif.</p>
+            <p style="font-family: monospace">Monospace.</p>
+            <p style="font-family: cursive">Cursive.</p>
+            <p style="font-family: fantasy">Fantasy.</p>
+          </section>
+
+          <section>
+            <h2>Font-Family: Stacks</h2>
+            <pre><code>
+  body {
+    font-family: Times, "Times New Roman", Georgia, serif;
+  }
+  h1 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+  }
+  code {
+    font-family: Courier, "Lucida Console", monospace;
+  }
+            </code></pre>
+            <p style="font-family: Times, Times New Roman, Georgia, serif;">Serif Stack.</p>
+            <p style="font-family: Verdana, Arial, Helvetica, sans-serif;">Sans-Serif Stack.</p>
+            <p style="font-family: Courier, "Lucida Console", monospace">Monospace Stack.</p>
+          </section>
+
+				</section>  <!-- END TYPOGRAPHY STYLE ======================== -->
+
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
